@@ -68,8 +68,10 @@ for i in range(10):
         for data in test_set[group]:
             vote, confidence= k_nearest_neighbors(train_set, data, k=5)
             
-            if group == vote:
-                correct +=1
+# =============================================================================
+#             if group == vote:
+#                 correct +=1
+# =============================================================================
 # =============================================================================
 #             else:
 #                 print(confidence)

@@ -68,8 +68,10 @@ for i in range(10):
         for data in test_set[group]:
             vote, confidence= k_nearest_neighbors(train_set, data, k=5)
             
-            if group == vote:
-                correct +=1
+# =============================================================================
+#             if group == vote:
+#                 correct +=1
+# =============================================================================
 # =============================================================================
 #             else:
 #                 print(confidence)
@@ -77,26 +79,11 @@ for i in range(10):
                 
             total += 1
             
-    #print('Accuracy' ,  correct/total) 
+    print('Accuracy' ,  correct/total) 
     accuracies.append(correct/total)
 
 print(sum(accuracies)/len(accuracies))
 
 
-# =============================================================================
-# vote2= k_nearest_neighbors(train_set, [1,1,1,1,1,4,2,1,10], k=5)
-# print(vote2)
-# =============================================================================
-            
-    
-# =============================================================================
-# results = k_nearest_neighbors(dataset, new_features, k=3)
-# print(results)
-# 
-# 
-# [[plt.scatter(ii[0], ii[1], s=100, color=i) for ii in dataset[i]] for i in dataset]
-# plt.scatter(new_features[0], new_features[1], s= 150, color=results)
-# plt.show()
-# =============================================================================
 
 
